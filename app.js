@@ -65,9 +65,9 @@ const sessionOptions = {
     },
 };
 
-// app.get("/",(req,res) => {
-//     res.send("<h2> Welcome to Wanderlust <\h2>");
-// });
+app.get("/",(req,res) => {
+    res.redirect('localhost:8080/listings');
+});
 
 app.use(session(sessionOptions));
 app.use(flash());
