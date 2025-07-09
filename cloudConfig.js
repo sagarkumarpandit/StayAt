@@ -1,14 +1,13 @@
-const cloudinary = require('cloudinary').v2;
+const cloudinary = require('cloudinary');
 const { CloudinaryStorage } = require('multer-storage-cloudinary');
 
 cloudinary.config({
     cloud_name: process.env.CLOUD_NAME,
     api_key: process.env.CLOUD_API_KEY,
     api_secret: process.env.CLOUD_API_SECRET,
-    atlasdb_url: process.env.ATLASDB_URL
 });
 
-const storage = new CloudinaryStorage({
+const storage = CloudinaryStorage({
     cloudinary: cloudinary,
     params: {
       folder: 'wanderlust_DEV',
@@ -20,3 +19,4 @@ module.exports = {
     cloudinary,
     storage,
 };
+
