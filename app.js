@@ -66,7 +66,7 @@ const sessionOptions = {
 };
 
 app.get("/",(req,res) => {
-    res.redirect('https://stayat.onrender.com');
+    res.redirect('https://stayat.onrender.com/listings');
 });
 
 app.use(session(sessionOptions));
